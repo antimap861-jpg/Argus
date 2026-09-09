@@ -14,7 +14,6 @@ suspicious_message = """
 URGENT: Your SBI account will be blocked today.
 Verify your account immediately at http://sbi-secure-login.xyz
 """
-
 prompt = f"""
 You are Sentinel, an evidence-based digital investigation assistant.
 
@@ -35,6 +34,9 @@ response = client.interactions.create(
     input=prompt,
     response_format=MessageIndicators.model_json_schema(),
 )
+
+
+print(response.output_text)
 
 indicators = MessageIndicators.model_validate_json(response.output_text)
 print(indicators)
