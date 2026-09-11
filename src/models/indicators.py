@@ -16,3 +16,4 @@ class URLIndicators(BaseModel):
     path: str | None = None
     query: str | None = None
     fragment: str | None = None
+    parsing_error: str | None = None
