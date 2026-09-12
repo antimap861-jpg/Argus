@@ -17,10 +17,10 @@ def analyze_url(url: str) -> URLIndicators:
         parsed = urlparse(url)
         # Attempt to access port, as this is where urlparse might raise ValueError for invalid ports
         _ = parsed.port
-    except ValueError as e:
+    except ValueError:
         # urlparse raises ValueError on things like invalid ports. 
         # For our purposes, we can fall back to returning the original URL with empty components if parsing completely fails.
-        return URLIndicators(original_url=url, parsing_error=str(e))
+        return URLIndicators(original_url=url)
 
     return URLIndicators(
         original_url=url,

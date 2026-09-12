@@ -15,7 +15,7 @@ URGENT: Your SBI account will be blocked today.
 Verify your account immediately at http://sbi-secure-login.xyz
 """
 prompt = f"""
-You are Sentinel, an evidence-based digital investigation assistant.
+You are Argus, an evidence-based digital investigation assistant.
 
 Extract investigation indicators from the suspicious message below.
 

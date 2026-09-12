@@ -8,7 +8,7 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 response = client.models.generate_content(
     model="gemini-3.6-flash",
-    contents="Say hello to Sentinel in one sentence."
+    contents="Say hello to Argus in one sentence."
 )
 
 print(response.text)
